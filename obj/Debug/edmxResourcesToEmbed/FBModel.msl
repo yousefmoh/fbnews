@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FBNewsDbModelStoreContainer" CdmEntityContainer="FBNewsDbEntities">
+    <EntitySetMapping Name="FBNews">
+      <EntityTypeMapping TypeName="FBNewsDbModel.FBNew">
+        <MappingFragment StoreEntitySet="FBNews">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="pagename" ColumnName="pagename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pages">
+      <EntityTypeMapping TypeName="FBNewsDbModel.page">
+        <MappingFragment StoreEntitySet="pages">
+          <ScalarProperty Name="lastcheckdate" ColumnName="lastcheckdate" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="pagefbid" ColumnName="pagefbid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pagename" ColumnName="pagename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="keywords">
+      <EntityTypeMapping TypeName="FBNewsDbModel.keyword">
+        <MappingFragment StoreEntitySet="keywords">
+          <ScalarProperty Name="keywords" ColumnName="keywords" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

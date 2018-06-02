@@ -1,0 +1,15 @@
+c:\users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\bin\Debug\FBNews.exe.config
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\bin\Debug\FBNews.exe
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\bin\Debug\FBNews.pdb
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\obj\Debug\FBNews.csprojResolveAssemblyReference.cache
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\obj\Debug\FBNews.Form1.resources
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\obj\Debug\FBNews.Properties.Resources.resources
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\obj\Debug\FBNews.csproj.GenerateResource.Cache
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\obj\Debug\FBNews.exe
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\obj\Debug\FBNews.pdb
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\bin\Debug\EntityFramework.dll
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\bin\Debug\EntityFramework.xml
+C:\Users\dexter\documents\visual studio 2013\Projects\FBNews\FBNews\bin\Debug\EntityFramework.SqlServer.xml
