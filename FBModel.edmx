@@ -13,6 +13,8 @@
           <Property Name="message" Type="nvarchar(max)" />
           <Property Name="created_at" Type="datetime" />
           <Property Name="pagename" Type="nvarchar(max)" />
+          <Property Name="keyword" Type="nvarchar(max)" />
+          <Property Name="post_id" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="keywords">
           <Key>
@@ -48,6 +50,8 @@
           <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="created_at" Type="DateTime" Precision="3" />
           <Property Name="pagename" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="keyword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="post_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="page">
           <Key>
@@ -80,6 +84,8 @@
           <EntitySetMapping Name="FBNews">
             <EntityTypeMapping TypeName="FBNewsDbModel.FBNew">
               <MappingFragment StoreEntitySet="FBNews">
+                <ScalarProperty Name="post_id" ColumnName="post_id" />
+                <ScalarProperty Name="keyword" ColumnName="keyword" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="message" ColumnName="message" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />

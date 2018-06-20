@@ -18,5 +18,7 @@ namespace FBNews
         public string message { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public string pagename { get; set; }
+        public string keyword { get; set; }
+        public string post_id { get; set; }
     }
 }

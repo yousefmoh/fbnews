@@ -17,23 +17,26 @@ namespace FBNews
 {
     public partial class Form1 : Form
     {
-        string token = "EAACEdEose0cBAIZAEPvlp02uj2i1Fr9AhbVk9lBJgb1p82lfZC8eQwFs4wBbvkZCUFuoHbsn2fod3zcy7vVdjsUQbhMYokTHl4XWXRPYPM3DqP4iWhSgAjQWX52GHelqhZB9IBOYgoOck7VJLITLFKhyw2KmBiw8CfaSOnodnKN950tqeugymUViDvCw2ooZD";
-        string Url = "https://graph.facebook.com/155869377766434/posts?limit=100&access_token=";
+        string token = "EAACEdEose0cBACZAmyTu5EXmZASXlOAGmGz0x28m02RSCFg7Nd8EKOrqZA2pXPguIjogs1hJGxKN4FBNEIVK1jDzLjFKkVMVQ5RwXqyWrs10b05rHfhwjSwND2qIpqa2NARzA6S2HTgSfUt5CKAHJ00tzVpnpiYdovkTaOVixioLarig4ggM5LlXxBeHZCsBfRBLuHeDjrV8ZCnNwaXe5";
+       // string Url = "https://graph.facebook.com/155869377766434/posts?limit=100&access_token=";
         List<page> pages;
         FBNewsDbEntities fbEntities;
         string[] keywords;
         string path;
+        
 
         public Form1()
         {
             InitializeComponent();
-            fbEntities = new FBNewsDbEntities();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            int postcount = 0;
+            fbEntities = new FBNewsDbEntities();
+            label6.Text = "Loading";
 
-            Url = Url + token;
+          //  Url = Url + token;
             pages = fbEntities.pages.ToList();
             keywords = fbEntities.keywords.Select(c => c.keywords).ToArray();
 
@@ -66,6 +69,7 @@ namespace FBNews
                             count = listresponse.Count;
                             string message = listresponse[i].message;
                             DateTime createdate = listresponse[i].created_time;
+                            string id = listresponse[i].id;
 
 
 
@@ -73,14 +77,16 @@ namespace FBNews
                             {
                                 foreach (string keyword in keywords)
                                 {
-                                    if (message.ToLower().Contains(keyword.ToLower()) && createdate > page.lastcheckdate)
+                                    if (message.ToLower().Contains(keyword.ToLower()) && !(fbEntities.FBNews.Any(c=>c.post_id==id)))
                                     {
                                         FBNew fb = new FBNew();
                                         fb.created_at = createdate;
                                         fb.message = message;
                                         fb.pagename = page.pagename;
+                                        fb.post_id = id;
                                         fbEntities.FBNews.Add(fb);
                                         fbEntities.SaveChanges();
+                                        postcount++;
 
                                     }
                                 }
@@ -100,8 +106,8 @@ namespace FBNews
                 }
             }
 
-            MessageBox.Show("Done ! Comeback tomworro ");
-
+            MessageBox.Show("Done ! We Found  " +postcount+ "  new posts");
+            label6.Text = "";
 
 
 
@@ -200,6 +206,11 @@ namespace FBNews
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

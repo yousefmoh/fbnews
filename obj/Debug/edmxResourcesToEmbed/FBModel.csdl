@@ -8,6 +8,8 @@
     <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="created_at" Type="DateTime" Precision="3" />
     <Property Name="pagename" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="keyword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="post_id" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="page">
     <Key>

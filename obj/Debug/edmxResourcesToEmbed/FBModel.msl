@@ -4,6 +4,8 @@
     <EntitySetMapping Name="FBNews">
       <EntityTypeMapping TypeName="FBNewsDbModel.FBNew">
         <MappingFragment StoreEntitySet="FBNews">
+          <ScalarProperty Name="post_id" ColumnName="post_id" />
+          <ScalarProperty Name="keyword" ColumnName="keyword" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="message" ColumnName="message" />
           <ScalarProperty Name="created_at" ColumnName="created_at" />
